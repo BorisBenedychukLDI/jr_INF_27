@@ -7,8 +7,10 @@ import com.fod.jooka.fyss.com.DaggerWebView09lio.WebViewSubComponent09lio
 import dagger.BindsInstance
 import dagger.Component
 import javax.inject.Named
+import javax.inject.Singleton
 
-@Component (modules = [OSModule09lio::class])
+@Singleton
+@Component (modules = [SPModule09lio::class])
 interface ApplicationComponent09lio {
 
     fun splashSC09lio (): SplashSubComponent
@@ -21,7 +23,6 @@ interface ApplicationComponent09lio {
         fun create (
             @BindsInstance @Named ("tag09lio") tag09lio: String,
             @BindsInstance context09lio: Context,
-            @BindsInstance @Named ("osKeyDecoded09lio") oskeyDecode09lio: String
         ): ApplicationComponent09lio
     }
 }

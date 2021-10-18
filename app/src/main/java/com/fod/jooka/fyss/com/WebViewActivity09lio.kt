@@ -1,18 +1,14 @@
 package com.fod.jooka.fyss.com
 
-import android.animation.FloatEvaluator
 import android.animation.ObjectAnimator
 import android.animation.ValueAnimator
 import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.animation.doOnEnd
 import androidx.lifecycle.lifecycleScope
-import com.fod.jooka.fyss.com.WebViewClasses09lio.WebChromeClient09lio
-import com.fod.jooka.fyss.com.WebViewClasses09lio.WebClient09lio
 import com.fod.jooka.fyss.com.WebViewClasses09lio.*
 import com.fod.jooka.fyss.com.databinding.ActivityWebViewActivity09lioBinding
 import kotlinx.coroutines.*
@@ -37,7 +33,7 @@ class WebViewActivity09lio : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding09lio = ActivityWebViewActivity09lioBinding.inflate(layoutInflater)
         setContentView(binding09lio.root)
-        Application09lio.component09lio.webSC09lio().create09lio(this).inject(this)
+        Application09lio.component09lio.webSC09lio().create09lio(this).inject09lio(this)
         binding09lio.wv09lio.run {
             webChromeClient = webChromeClient09lio
             webViewClient = webClient09lio

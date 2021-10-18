@@ -32,18 +32,18 @@ class MainActivity09lio : AppCompatActivity() {
         binding09lio.b09lio.isClickable = false
         lifecycleScope.launch {
             ValueAnimator.ofFloat(0f, 1f).run {
-                duration = 5000
+                startDelay = 2000
+                duration = 3000
                 addUpdateListener {
                     binding09lio.lottieMain09lio.progress = it.animatedValue.toString().toFloat()
                 }
-                doOnEnd {
-                    binding09lio.pb09lio.animate().alpha(0f)
-                    binding09lio.lottieMain09lio.setOnClickListener {
-                        startActivity(Intent(this@MainActivity09lio, WebViewActivity09lio::class.java))
-                        finish()
-                    }
-                }
                 start()
+            }
+            delay(5000)
+            binding09lio.pb09lio.animate().alpha(0f)
+            binding09lio.lottieMain09lio.setOnClickListener {
+                startActivity(Intent(this@MainActivity09lio, WebViewActivity09lio::class.java))
+                finish()
             }
 
         }

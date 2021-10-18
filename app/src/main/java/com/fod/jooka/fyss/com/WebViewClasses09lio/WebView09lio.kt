@@ -6,7 +6,7 @@ import android.view.View
 import android.webkit.WebSettings
 import android.webkit.WebView
 
-class WebView09lio(context: Context, attributeSet: AttributeSet): WebView(context, attributeSet) {
+class WebView09lio(context09lio: Context, attributeSet09lio: AttributeSet): WebView(context09lio, attributeSet09lio) {
     init {
         scrollBarStyle = View.SCROLLBARS_INSIDE_OVERLAY
         settings.run {

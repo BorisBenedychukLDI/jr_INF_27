@@ -8,7 +8,7 @@ import dagger.Subcomponent
 @Subcomponent
 interface WebViewSubComponent09lio {
 
-    fun inject (webViewActivity09lio: WebViewActivity09lio)
+    fun inject09lio (webViewActivity09lio: WebViewActivity09lio)
 
     @Subcomponent.Factory
     interface Factory {

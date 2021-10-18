@@ -12,7 +12,7 @@ import javax.inject.Inject
 class WebClient09lio  @Inject constructor(private val sharedPreferences09lio: SharedPreferences) : WebViewClient() {
 
     override fun shouldOverrideUrlLoading(view09lio: WebView?, request09lio: WebResourceRequest?): Boolean {
-        val prohibitedLinks09lio = listOf("facebook","instagram","youtube","booking","tripadvisor","maps")
+        val prohibitedLinks09lio = listOf("facebook","twitter")
         val modifiedLinks09lio = listOf ("mailto:","tel:")
         return when {
             modifiedLinks09lio.find { request09lio?.url.toString().startsWith(it) } != null -> {
@@ -30,9 +30,9 @@ class WebClient09lio  @Inject constructor(private val sharedPreferences09lio: Sh
         }
     }
 
-    override fun onPageFinished(view: WebView?, url: String?) {
-        sharedPreferences09lio.edit().putString("Last_Page_09lio", url?: return).apply()
-        super.onPageFinished(view, url)
+    override fun onPageFinished(view09lio: WebView?, url09lio: String?) {
+        sharedPreferences09lio.edit().putString("Last_Page_09lio", url09lio?: return).apply()
+        super.onPageFinished(view09lio, url09lio)
     }
 
     override fun onReceivedSslError(view09lio: WebView?, handler09lio: SslErrorHandler?, error09lio: SslError?) {

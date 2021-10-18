@@ -31,7 +31,7 @@
         android:layout_width="142dp"
         android:layout_height="48dp"
         android:background="@drawable/button_bg_09lio"
-        android:text="Reconnect"
+        android:text="@string/reconnect_09lio"
         android:textAllCaps="false"
         android:textColor="@color/theme_1"
         app:layout_constraintBottom_toTopOf="@+id/gl_wv_09lio"

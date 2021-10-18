@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">Jookaroom</string>
+    <string name="background_09lio">background</string>
+    <string name="logo_09lio">logo</string>
+    <string name="reconnect_09lio">Reconnect</string>
 </resources>
